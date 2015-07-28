@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "YUHomeViewController.h"
+#import "YUEyesTabController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    YUEyesTabController * tab = (YUEyesTabController * ) [YUEyesTabController share];
+    self.window.rootViewController = tab ;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
