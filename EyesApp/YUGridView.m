@@ -45,7 +45,6 @@
     
     CGPoint touchPoint = [ges locationInView:self];
 
-    
     _yFatherScrollerView.scrollEnabled = NO;
     
     if(lock == NO){
@@ -102,6 +101,7 @@
             [_yGirdElementArrary insertObject:view atIndex:_willBecomViewIndex];
         }
         
+        //重置布局
         [self rechangeView];
     
         _yFatherScrollerView.scrollEnabled = YES;

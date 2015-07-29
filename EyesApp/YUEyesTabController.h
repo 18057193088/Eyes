@@ -9,5 +9,7 @@
 #import "YUTabController.h"
 
 @interface YUEyesTabController : YUTabController
++(YUEyesTabController *)share;
+
 
 @end

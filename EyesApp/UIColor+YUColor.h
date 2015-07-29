@@ -38,5 +38,6 @@
 
 +(UIColor *) yDeepRedColor;
 
++(UIColor *) yNavGreen;
 
 @end

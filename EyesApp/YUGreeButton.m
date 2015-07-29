@@ -34,8 +34,6 @@
     self.layer.borderColor = [UIColor colorwithRgb:163 g:205 b:166 ].CGColor;
     self.layer.borderWidth=0.5;
     
-    
-    
     [self.titleLabel setFont:[UIFont systemFontOfSize:13]];
     
     

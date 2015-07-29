@@ -9,5 +9,9 @@
 #import "YUFatherViewController.h"
 
 @interface YUEyesActivityViewController : YUFatherViewController
+@property(strong,nonatomic) UIImageView* yEyesBallImageView;
+@property(strong,nonatomic) UIImageView* yRightEyesBallImageView;
 
+@property(strong,nonatomic) UIImageView * yLeftArrrow;
+@property(strong,nonatomic) UIImageView * yRightArrrow;
 @end

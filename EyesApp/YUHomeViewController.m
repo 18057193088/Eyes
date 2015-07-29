@@ -15,6 +15,7 @@
 #import "YUGreeButton.h"
 #import "CONST_PUBLIE.h"
 #import "const_tab.h"
+#import "YUEyesActivityViewController.h"
 #define start_top 15
 #define gird_top 20
 #define start_width 150
@@ -93,9 +94,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark 格子按下
 -(void)whenGirdItemTouchUpInSide:(NSInteger)index{
 
-    NSLog(@"--x-x%d",index);
+  YUEyesActivityViewController * controller =   [[YUEyesActivityViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
     
 }
 /*
