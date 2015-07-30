@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol YUCircleButtonDeledge <NSObject>
+
+-(void)whenCircleButtonTouchUpInSide;
+
+
+@end
 @interface YUCircleButton : UIView
 @property(strong,nonatomic) UIView *yCenterView;
 @property(strong,nonatomic) UIImageView * yIconView;
 @property(strong,nonatomic) UILabel * yTitleLabel ;
+@property(strong,nonatomic) UIButton * yOutButton;
+@property(weak,nonatomic) id <YUCircleButtonDeledge> deledge ;
+
+-(id)initWithIcon:(UIImage *)ima title:(NSString *)title width:(float)width ;
+-(void)blackStyle;
+
+-(void)setTitle:(NSString *)title;
+
 
 @end

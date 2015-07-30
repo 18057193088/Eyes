@@ -14,3 +14,9 @@
 #define ARROW_WIDTH 78
 #define ARROW_HEIGHT 25.5
 #define ARROW_TOP 70
+
+#define START_BUTTON_MARGIN_LEFT 40
+#define START_BUTTON_BOTTOM 40
+
+#define TIP_FONT_SIZE 16
+#define TIP_TOP 30

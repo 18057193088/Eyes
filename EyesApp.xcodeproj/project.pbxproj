@@ -31,6 +31,8 @@
 		9A9B24F81B385F9700DDB6AA /* YUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B24F61B385F9700DDB6AA /* YUHomeViewController.m */; };
 		9A9B24F91B385F9700DDB6AA /* YUHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A9B24F71B385F9700DDB6AA /* YUHomeViewController.xib */; };
 		9A9B24FD1B38630700DDB6AA /* YUGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B24FC1B38630700DDB6AA /* YUGridView.m */; };
+		9AB8A68A1B69C742006B11AC /* function.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8A6891B69C742006B11AC /* function.m */; };
+		9AB8A6901B6A2687006B11AC /* UIView+YUAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8A68F1B6A2687006B11AC /* UIView+YUAnimation.m */; };
 		9AE703BB1B390E6C0024868B /* UIView+YUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE703BA1B390E6C0024868B /* UIView+YUStyle.m */; };
 		9AE703C11B39112D0024868B /* YUNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE703C01B39112D0024868B /* YUNormalView.m */; };
 /* End PBXBuildFile section */
@@ -93,6 +95,11 @@
 		9A9B24F71B385F9700DDB6AA /* YUHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUHomeViewController.xib; sourceTree = "<group>"; };
 		9A9B24FB1B38630700DDB6AA /* YUGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUGridView.h; sourceTree = "<group>"; };
 		9A9B24FC1B38630700DDB6AA /* YUGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUGridView.m; sourceTree = "<group>"; };
+		9AB8A6881B69C742006B11AC /* function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = function.h; sourceTree = "<group>"; };
+		9AB8A6891B69C742006B11AC /* function.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = function.m; sourceTree = "<group>"; };
+		9AB8A68B1B69D64B006B11AC /* CONST_CIRCLEBUTTON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_CIRCLEBUTTON.h; sourceTree = "<group>"; };
+		9AB8A68E1B6A2687006B11AC /* UIView+YUAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUAnimation.h"; sourceTree = "<group>"; };
+		9AB8A68F1B6A2687006B11AC /* UIView+YUAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YUAnimation.m"; sourceTree = "<group>"; };
 		9AE703B81B390DE70024868B /* CONST_PUBLIE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_PUBLIE.h; sourceTree = "<group>"; };
 		9AE703B91B390E6C0024868B /* UIView+YUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUStyle.h"; sourceTree = "<group>"; };
 		9AE703BA1B390E6C0024868B /* UIView+YUStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YUStyle.m"; sourceTree = "<group>"; };
@@ -137,13 +144,14 @@
 			name = "正常的Nav标题栏";
 			sourceTree = "<group>";
 		};
-		9A43EA981B68C42A0024BD39 /* CircleButton */ = {
+		9A43EA981B68C42A0024BD39 /* CircleButton//圆角按钮 */ = {
 			isa = PBXGroup;
 			children = (
 				9A43EA991B68C44B0024BD39 /* YUCircleButton.h */,
 				9A43EA9A1B68C44B0024BD39 /* YUCircleButton.m */,
+				9AB8A68B1B69D64B006B11AC /* CONST_CIRCLEBUTTON.h */,
 			);
-			name = CircleButton;
+			name = "CircleButton//圆角按钮";
 			sourceTree = "<group>";
 		};
 		9A4A4C2A1B4452A80063F5B3 /* 底部继承 */ = {
@@ -194,7 +202,7 @@
 		9A4A4C511B4461F30063F5B3 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
-				9A43EA981B68C42A0024BD39 /* CircleButton */,
+				9A43EA981B68C42A0024BD39 /* CircleButton//圆角按钮 */,
 				9A4A4C521B44620B0063F5B3 /* GreeView */,
 				9A9B24FA1B3862F300DDB6AA /* GirdView */,
 			);
@@ -302,6 +310,32 @@
 			name = GirdView;
 			sourceTree = "<group>";
 		};
+		9AB8A6871B69C6F8006B11AC /* 函数 */ = {
+			isa = PBXGroup;
+			children = (
+				9AB8A6881B69C742006B11AC /* function.h */,
+				9AB8A6891B69C742006B11AC /* function.m */,
+			);
+			name = "函数";
+			sourceTree = "<group>";
+		};
+		9AB8A68C1B6A265B006B11AC /* 原生控件扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				9AB8A68D1B6A266A006B11AC /* 动画 */,
+			);
+			name = "原生控件扩展";
+			sourceTree = "<group>";
+		};
+		9AB8A68D1B6A266A006B11AC /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				9AB8A68E1B6A2687006B11AC /* UIView+YUAnimation.h */,
+				9AB8A68F1B6A2687006B11AC /* UIView+YUAnimation.m */,
+			);
+			name = "动画";
+			sourceTree = "<group>";
+		};
 		9AE703B71B390DD60024868B /* CONST */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +360,8 @@
 		9AE703BE1B390E8E0024868B /* Extenion */ = {
 			isa = PBXGroup;
 			children = (
+				9AB8A68C1B6A265B006B11AC /* 原生控件扩展 */,
+				9AB8A6871B69C6F8006B11AC /* 函数 */,
 				9A43EA961B68A9130024BD39 /* 正常的Nav标题栏 */,
 				9A4A4C341B445A2E0063F5B3 /* YUTabController */,
 				9A4A4C421B445A920063F5B3 /* UIColor+YUColor.h */,
@@ -440,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A4A4C551B44621D0063F5B3 /* YUGreeButton.m in Sources */,
+				9AB8A6901B6A2687006B11AC /* UIView+YUAnimation.m in Sources */,
 				9A9B24F31B385EC000DDB6AA /* YUFatherViewController.m in Sources */,
 				9A4A4C441B445A920063F5B3 /* UIColor+YUColor.m in Sources */,
 				9A43EA9B1B68C44B0024BD39 /* YUCircleButton.m in Sources */,
@@ -447,6 +484,7 @@
 				9A4A4C311B4458990063F5B3 /* YUEyesTabController.m in Sources */,
 				9A58ADEF1B2D9500007314AC /* AppDelegate.m in Sources */,
 				9A4A4C3F1B445A2E0063F5B3 /* YUTabBarView.m in Sources */,
+				9AB8A68A1B69C742006B11AC /* function.m in Sources */,
 				9A37B0341B653245003A213C /* YUEyesActivityViewController.m in Sources */,
 				9A4A4C291B44429D0063F5B3 /* YUGirdItem.m in Sources */,
 				9A4A4C401B445A2E0063F5B3 /* YUTabController.m in Sources */,
