@@ -20,3 +20,5 @@
 
 #define TIP_FONT_SIZE 16
 #define TIP_TOP 30
+
+#define before_title @"顺时针,准备计时"

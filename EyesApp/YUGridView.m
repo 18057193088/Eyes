@@ -42,7 +42,6 @@
 
 -(void)whenLongPress:(UIGestureRecognizer *) ges{
     
-    
     CGPoint touchPoint = [ges locationInView:self];
 
     _yFatherScrollerView.scrollEnabled = NO;
@@ -80,7 +79,7 @@
         
         YUNormalView * view = [_yGirdElementArrary objectAtIndex:_curSelectViewIndex];
         
-        
+    
         view.center = touchPoint;
     
     }
@@ -125,7 +124,6 @@
     
     for(int i = 0 ; i<  MAX_ITEM_COUNT; i++){
     
-        
     [UIView animateWithDuration:0.3 animations:^{
           YUNormalView * view = [_yGirdElementArrary objectAtIndex:i];
         [view removeFromSuperview];
@@ -138,18 +136,14 @@
     }
     
 }
-
-
 -(NSInteger)posInArryByPoint:(CGPoint)point{
 
-    
     int col =   (int)point.x / (int)eW;
     
     int row = (int) point.y/  (int)eH ;
     
     NSLog(@"%f,%f",point.x,point.y);
-    
-    
+
     NSLog(@"%f /%f = %d ",point.x,eW,col);
     
     

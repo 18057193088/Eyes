@@ -13,12 +13,18 @@
 #import "UIView+YUAnimation.h"
 #import "UIColor+YUColor.h"
 #import "function.h"
+#import "YUNavNormalView.h"
+#define TIME_NUM 5
 @interface YUEyesActivityViewController ()
 {
     float angle;
     float rightAngle;
     
     BOOL _isStrartEyesActivity;
+    
+    NSTimer * _timer ;
+    int _timeNum;
+    float _Ddegree;
     
 }
 @end
@@ -34,17 +40,15 @@
 
 -(void)setUp{
 
-    [self initNav];
     
+    
+    [self initNav];
     angle= 0;
     rightAngle = 0 ;
-    
+    _timeNum = TIME_NUM;
+    _Ddegree= 90;
     
     [self initView];
-    
-
-                                                                                                                 
-    
 }
 
 -(void)initView{
@@ -79,7 +83,7 @@
     
     float startWidth =  SCREEN_WIDTH - START_BUTTON_MARGIN_LEFT*2 ;
     
-    _yStartButton = [[YUCircleButton alloc] initWithIcon:[UIImage imageNamed:@"震动"] title:@"顺时针,准备计时" width: startWidth ];
+    _yStartButton = [[YUCircleButton alloc] initWithIcon:[UIImage imageNamed:@"震动"] title:before_title width: startWidth ];
     
     [_yStartButton  blackStyle];
     
@@ -89,7 +93,6 @@
     [_yStartButton y_setBottom:START_BUTTON_BOTTOM];
     
     _yStartButton.deledge =self;
-    
     
     // 提示Label
     NSString * tipStr = @"指导:\n摘下眼镜,凝视左方,双眼跟着眼球转到正上方,再转至右方,再转至正下方。逆时针和顺时针方向各坚持一分钟";
@@ -115,17 +118,57 @@
     
     [self.view addSubview:_yTipLabel];
     
+    _yButtonGroup = [[YUButtonGroup alloc]initWithFrame:CGRectMake(0, 0, 120, 44) titles:@[@"顺时针",@"逆时针"]];
+  
+    
+    [self.y_NavView addSubview:_yButtonGroup];
+    
+    [_yButtonGroup y_setAlign:5];
+    
+    [_yButtonGroup y_setBottom:0];
+    
+    [_yButtonGroup setHidden:YES];
+    _yButtonGroup.deledge =self;
+    
+    
+    
+}
+
+-(void)IF_FirstTimeStartEyesProtectButton_then_do_FirstThing{
+
+   [_yTipLabel dissMiss];
+    
+    [self.y_NavView.titleView setHidden:YES];
+    
+
+    [_yButtonGroup setHidden:NO];
     
 }
 -(void)whenCircleButtonTouchUpInSide{
 
     if(!_isStrartEyesActivity){
+        /*第一次按下后该做的事情*/
+        [self IF_FirstTimeStartEyesProtectButton_then_do_FirstThing];
         //还没有开始做眼保健操状态---即-- 准备状态
+   
+        
         [self circleButtonActivitingState];
         
+        [self startEyesBallAnimation]; //开始眼球运动
 
-        [self startEyesBallAnimation];
         
+        
+        
+    }
+
+}
+
+-(void)whenGroupButtonTouchUpInSide:(int)buttonIndex{
+    
+    if(buttonIndex ==0 ){
+        _Ddegree = 90;
+    }else{
+        _Ddegree  = - 90;
         
     }
 
@@ -133,16 +176,39 @@
 
 -(void)circleButtonReadStartState{
     
+    _isStrartEyesActivity = NO;
+    [_yStartButton setTitle:before_title];
+   
+    
     
 }
 -(void)circleButtonActivitingState{
     
-    [_yStartButton setTitle:@"还剩50秒"];
+    [_yStartButton setTitle:@"还有50秒"];
+    _isStrartEyesActivity = YES;
+    _timeNum= TIME_NUM;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCircleButtonTitle) userInfo:nil repeats:YES];
     
-    [_yTipLabel dissMiss];
+ 
     
 }
+-(void)updateCircleButtonTitle{
 
+    if(_timeNum ==0){
+    
+        [_timer invalidate];
+     
+        [self circleButtonReadStartState];
+        
+        return;
+        
+        
+    }
+    [_yStartButton setTitle:[NSString stringWithFormat:@"还有%d秒",_timeNum] ];
+    _timeNum -- ;
+    
+    
+}
 -(UIImageView *)makeBallView{
 
     UIImageView * ballView = [[UIImageView alloc]initWithFrame:CGRectMake(EYE_LEFT, 200, EYE_BALL_WIDTH, EYE_BALL_WIDTH)];
@@ -190,6 +256,8 @@
 -(void) startAnimation
 {
     if(!_isStrartEyesActivity){
+        angle -= _Ddegree;
+        
         return;
         
     }
@@ -204,7 +272,7 @@
 -(void)endAnimation
 {
     
-    angle += 90;
+    angle += _Ddegree;
     
     [self startAnimation];
 
@@ -213,6 +281,8 @@
 -(void)startRightAnimation
 {
     if(!_isStrartEyesActivity){
+        rightAngle-=_Ddegree;
+        
         return;
         
     }
@@ -227,7 +297,7 @@
 -(void)endRightAnimation
 {
     
-    rightAngle += 90;
+    rightAngle += _Ddegree;
     
     [self startRightAnimation];
     

@@ -40,4 +40,7 @@
 
 +(UIColor *) yNavGreen;
 
+
++(UIColor *)darkWhite;
+
 @end

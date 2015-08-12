@@ -10,6 +10,7 @@
 		9A37B0341B653245003A213C /* YUEyesActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A37B0331B653245003A213C /* YUEyesActivityViewController.m */; };
 		9A43EA951B68A9110024BD39 /* YUNavNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A43EA941B68A9110024BD39 /* YUNavNormalView.m */; };
 		9A43EA9B1B68C44B0024BD39 /* YUCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A43EA9A1B68C44B0024BD39 /* YUCircleButton.m */; };
+		9A4949BF1B7AF88F00041639 /* YUButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4949BE1B7AF88F00041639 /* YUButtonGroup.m */; };
 		9A4A4C291B44429D0063F5B3 /* YUGirdItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A4C281B44429D0063F5B3 /* YUGirdItem.m */; };
 		9A4A4C311B4458990063F5B3 /* YUEyesTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A4C301B4458990063F5B3 /* YUEyesTabController.m */; };
 		9A4A4C3E1B445A2E0063F5B3 /* YUSubControllerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A4C371B445A2E0063F5B3 /* YUSubControllerItem.m */; };
@@ -55,6 +56,8 @@
 		9A43EA971B68C1750024BD39 /* CONST_EYESActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_EYESActivity.h; sourceTree = "<group>"; };
 		9A43EA991B68C44B0024BD39 /* YUCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCircleButton.h; sourceTree = "<group>"; };
 		9A43EA9A1B68C44B0024BD39 /* YUCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCircleButton.m; sourceTree = "<group>"; };
+		9A4949BD1B7AF88F00041639 /* YUButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUButtonGroup.h; sourceTree = "<group>"; };
+		9A4949BE1B7AF88F00041639 /* YUButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUButtonGroup.m; sourceTree = "<group>"; };
 		9A4A4C271B44429D0063F5B3 /* YUGirdItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUGirdItem.h; sourceTree = "<group>"; };
 		9A4A4C281B44429D0063F5B3 /* YUGirdItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUGirdItem.m; sourceTree = "<group>"; };
 		9A4A4C2F1B4458990063F5B3 /* YUEyesTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEyesTabController.h; sourceTree = "<group>"; };
@@ -154,6 +157,15 @@
 			name = "CircleButton//圆角按钮";
 			sourceTree = "<group>";
 		};
+		9A4949BC1B7AF6B000041639 /* 按钮切换 */ = {
+			isa = PBXGroup;
+			children = (
+				9A4949BD1B7AF88F00041639 /* YUButtonGroup.h */,
+				9A4949BE1B7AF88F00041639 /* YUButtonGroup.m */,
+			);
+			name = "按钮切换";
+			sourceTree = "<group>";
+		};
 		9A4A4C2A1B4452A80063F5B3 /* 底部继承 */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +214,7 @@
 		9A4A4C511B4461F30063F5B3 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				9A4949BC1B7AF6B000041639 /* 按钮切换 */,
 				9A43EA981B68C42A0024BD39 /* CircleButton//圆角按钮 */,
 				9A4A4C521B44620B0063F5B3 /* GreeView */,
 				9A9B24FA1B3862F300DDB6AA /* GirdView */,
@@ -497,6 +510,7 @@
 				9A9B24F81B385F9700DDB6AA /* YUHomeViewController.m in Sources */,
 				9A4A4C4F1B445B330063F5B3 /* YULoveEyesViewController.m in Sources */,
 				9AE703C11B39112D0024868B /* YUNormalView.m in Sources */,
+				9A4949BF1B7AF88F00041639 /* YUButtonGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
