@@ -8,7 +8,7 @@
 
 #import "YUHomeViewController.h"
 #import "CONST_PUBLIE.h"
-
+#import "YUEyesTestViewController.h"
 #import "UIView+YUStyle.h"
 #import "YUGirdItem.h"
 #import "UIColor+YUColor.h"
@@ -97,10 +97,16 @@
 
 #pragma mark 格子按下
 -(void)whenGirdItemTouchUpInSide:(NSInteger)index{
-
-  YUEyesActivityViewController * controller =   [[YUEyesActivityViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+    if(index == 1){
+        YUEyesActivityViewController * controller =   [[YUEyesActivityViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    if(index ==2){
     
+        YUEyesTestViewController * eyesTestController = [[YUEyesTestViewController alloc]init];
+        [self.navigationController pushViewController:eyesTestController animated:YES];
+        
+    }
     
 }
 /*
