@@ -36,6 +36,7 @@
 		9A9B24FD1B38630700DDB6AA /* YUGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B24FC1B38630700DDB6AA /* YUGridView.m */; };
 		9AB8A68A1B69C742006B11AC /* function.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8A6891B69C742006B11AC /* function.m */; };
 		9AB8A6901B6A2687006B11AC /* UIView+YUAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8A68F1B6A2687006B11AC /* UIView+YUAnimation.m */; };
+		9ADE01BD1B82E07800BDC9D4 /* YUCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ADE01BC1B82E07800BDC9D4 /* YUCTestViewController.m */; };
 		9AE703BB1B390E6C0024868B /* UIView+YUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE703BA1B390E6C0024868B /* UIView+YUStyle.m */; };
 		9AE703C11B39112D0024868B /* YUNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE703C01B39112D0024868B /* YUNormalView.m */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,9 @@
 		9AB8A68B1B69D64B006B11AC /* CONST_CIRCLEBUTTON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_CIRCLEBUTTON.h; sourceTree = "<group>"; };
 		9AB8A68E1B6A2687006B11AC /* UIView+YUAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUAnimation.h"; sourceTree = "<group>"; };
 		9AB8A68F1B6A2687006B11AC /* UIView+YUAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YUAnimation.m"; sourceTree = "<group>"; };
+		9ADE01B91B82CCA300BDC9D4 /* CONST_COLOR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_COLOR.h; sourceTree = "<group>"; };
+		9ADE01BB1B82E07800BDC9D4 /* YUCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCTestViewController.h; sourceTree = "<group>"; };
+		9ADE01BC1B82E07800BDC9D4 /* YUCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCTestViewController.m; sourceTree = "<group>"; };
 		9AE703B81B390DE70024868B /* CONST_PUBLIE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_PUBLIE.h; sourceTree = "<group>"; };
 		9AE703B91B390E6C0024868B /* UIView+YUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YUStyle.h"; sourceTree = "<group>"; };
 		9AE703BA1B390E6C0024868B /* UIView+YUStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YUStyle.m"; sourceTree = "<group>"; };
@@ -208,14 +212,14 @@
 			name = LoveEyesController;
 			sourceTree = "<group>";
 		};
-		9A4A4C461B445B070063F5B3 /* MineController/我的 */ = {
+		9A4A4C461B445B070063F5B3 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
 				9A4A4C471B445B210063F5B3 /* YUMineViewController.h */,
 				9A4A4C481B445B210063F5B3 /* YUMineViewController.m */,
 				9A4A4C491B445B210063F5B3 /* YUMineViewController.xib */,
 			);
-			name = "MineController/我的";
+			name = "我的";
 			sourceTree = "<group>";
 		};
 		9A4A4C511B4461F30063F5B3 /* VIEW */ = {
@@ -299,13 +303,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9A920C271B8032FC0042CFA5 /* 眼测试 */ = {
+		9A920C271B8032FC0042CFA5 /* 眼测试引导 */ = {
 			isa = PBXGroup;
 			children = (
 				9A920C281B8033300042CFA5 /* YUEyesTestViewController.h */,
 				9A920C291B8033300042CFA5 /* YUEyesTestViewController.m */,
+				9ADE01B91B82CCA300BDC9D4 /* CONST_COLOR.h */,
 			);
-			name = "眼测试";
+			name = "眼测试引导";
 			sourceTree = "<group>";
 		};
 		9A920C2B1B803A190042CFA5 /* 眼测试-选项按钮-元素 */ = {
@@ -327,14 +332,14 @@
 			name = ROOT_CLASS;
 			sourceTree = "<group>";
 		};
-		9A9B24EF1B385DE100DDB6AA /* HomePage/首页 */ = {
+		9A9B24EF1B385DE100DDB6AA /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
 				9A9B24F51B385F9700DDB6AA /* YUHomeViewController.h */,
 				9A9B24F61B385F9700DDB6AA /* YUHomeViewController.m */,
 				9A9B24F71B385F9700DDB6AA /* YUHomeViewController.xib */,
 			);
-			name = "HomePage/首页";
+			name = "首页";
 			sourceTree = "<group>";
 		};
 		9A9B24FA1B3862F300DDB6AA /* GirdView/格子视图 */ = {
@@ -376,6 +381,15 @@
 			name = "动画";
 			sourceTree = "<group>";
 		};
+		9ADE01BA1B82DFC900BDC9D4 /* C字眼测试 */ = {
+			isa = PBXGroup;
+			children = (
+				9ADE01BB1B82E07800BDC9D4 /* YUCTestViewController.h */,
+				9ADE01BC1B82E07800BDC9D4 /* YUCTestViewController.m */,
+			);
+			name = "C字眼测试";
+			sourceTree = "<group>";
+		};
 		9AE703B71B390DD60024868B /* CONST */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,10 +401,11 @@
 		9AE703BC1B390E730024868B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9A920C271B8032FC0042CFA5 /* 眼测试 */,
+				9ADE01BA1B82DFC900BDC9D4 /* C字眼测试 */,
+				9A920C271B8032FC0042CFA5 /* 眼测试引导 */,
 				9A37B0311B6530F2003A213C /* 眼保健操 */,
-				9A9B24EF1B385DE100DDB6AA /* HomePage/首页 */,
-				9A4A4C461B445B070063F5B3 /* MineController/我的 */,
+				9A9B24EF1B385DE100DDB6AA /* 首页 */,
+				9A4A4C461B445B070063F5B3 /* 我的 */,
 				9A4A4C451B445AF70063F5B3 /* LoveEyesController */,
 				9A4A4C2A1B4452A80063F5B3 /* 底部继承 */,
 				9A9B24EE1B385DD100DDB6AA /* ROOT_CLASS */,
@@ -520,6 +535,7 @@
 				9AB8A6901B6A2687006B11AC /* UIView+YUAnimation.m in Sources */,
 				9A9B24F31B385EC000DDB6AA /* YUFatherViewController.m in Sources */,
 				9A4A4C441B445A920063F5B3 /* UIColor+YUColor.m in Sources */,
+				9ADE01BD1B82E07800BDC9D4 /* YUCTestViewController.m in Sources */,
 				9A43EA9B1B68C44B0024BD39 /* YUCircleButton.m in Sources */,
 				9A4A4C4A1B445B210063F5B3 /* YUMineViewController.m in Sources */,
 				9A4A4C311B4458990063F5B3 /* YUEyesTabController.m in Sources */,

@@ -103,4 +103,11 @@ return [UIColor colorWithRed:74 /255.0 green:74/255.0 blue:74/255.0 alpha:1];
     
 }
 
++(UIColor *) chocolateColor{
+
+
+    return [UIColor colorwithRgb:150 g:138 b:125];
+    
+}
+
 @end

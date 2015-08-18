@@ -7,5 +7,6 @@
 //
 
 #define PADDING_LEFT 10
-#define TITLE_LEFT 10
+#define TITLE_LEFT 15
+#define TITLE_FONT 16
 #define ImageView_Width 30

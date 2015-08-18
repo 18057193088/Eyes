@@ -7,7 +7,13 @@
 //
 
 #import "YUFatherViewController.h"
+#import "YUEyeTestButton.h"
 
-@interface YUEyesTestViewController : YUFatherViewController
+@class YUEyeTestButton;
+
+@interface YUEyesTestViewController : YUFatherViewController<YUEyeTestButtonDeledge>
+@property(strong,nonatomic) YUEyeTestButton * yCtestButton ;
+@property(strong,nonatomic) YUEyeTestButton * yColorTestButton;
+@property(strong,nonatomic) UILabel * tipLabel;
 
 @end

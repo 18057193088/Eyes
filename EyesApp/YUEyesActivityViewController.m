@@ -150,15 +150,10 @@
         /*第一次按下后该做的事情*/
         [self IF_FirstTimeStartEyesProtectButton_then_do_FirstThing];
         //还没有开始做眼保健操状态---即-- 准备状态
-   
-        
         [self circleButtonActivitingState];
         
         [self startEyesBallAnimation]; //开始眼球运动
 
-        
-        
-        
     }
 
 }
@@ -178,10 +173,9 @@
     
     _isStrartEyesActivity = NO;
     [_yStartButton setTitle:before_title];
-   
-    
-    
 }
+
+
 -(void)circleButtonActivitingState{
     
     [_yStartButton setTitle:@"还有50秒"];
@@ -231,8 +225,6 @@
     [imageView setImage:[UIImage imageNamed:@"旋转提示"]];
     
     return imageView;
-    
-
 }
 
 -(void)initNav{
@@ -240,6 +232,7 @@
     [self setNavTitle:@"眼保健操" isShowBack:YES];
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -253,13 +246,12 @@
     [self startRightAnimation];
     
 }
+
 -(void) startAnimation
 {
     if(!_isStrartEyesActivity){
         angle -= _Ddegree;
-        
         return;
-        
     }
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.7];
@@ -268,23 +260,16 @@
     _yEyesBallImageView.transform = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
     [UIView commitAnimations];
 }
-
 -(void)endAnimation
 {
-    
     angle += _Ddegree;
-    
     [self startAnimation];
-
 }
-
 -(void)startRightAnimation
 {
     if(!_isStrartEyesActivity){
         rightAngle-=_Ddegree;
-        
         return;
-        
     }
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.7];
@@ -294,13 +279,11 @@
     [UIView commitAnimations];
 }
 
+
 -(void)endRightAnimation
 {
-    
     rightAngle += _Ddegree;
-    
     [self startRightAnimation];
-    
     // 360x = 90
 }
 /*
@@ -312,5 +295,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

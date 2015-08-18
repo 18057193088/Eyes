@@ -11,4 +11,6 @@
 @interface YUFatherViewController : UIViewController
 @property(strong,nonatomic) YUNavNormalView * y_NavView;
 -(void)setNavTitle:(NSString *) title isShowBack:(BOOL) isShowBack;
+-(void)hideTitle;
+
 @end

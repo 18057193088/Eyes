@@ -69,6 +69,11 @@
     
     
 }
+-(void)hideTitle{
+
+    [_y_NavView.titleView setHidden:YES];
+    
+}
 /*
 #pragma mark - Navigation
 

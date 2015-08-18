@@ -43,4 +43,7 @@
 
 +(UIColor *)darkWhite;
 
++(UIColor *) chocolateColor;
+
+
 @end
