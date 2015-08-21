@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A275D011B856DF900190B6C /* YUMiniNumButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A275D001B856DF900190B6C /* YUMiniNumButtonGroup.m */; };
+		9A275D041B856FAF00190B6C /* YUMiniGreenButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A275D031B856FAF00190B6C /* YUMiniGreenButton.m */; };
 		9A37B0341B653245003A213C /* YUEyesActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A37B0331B653245003A213C /* YUEyesActivityViewController.m */; };
 		9A43EA951B68A9110024BD39 /* YUNavNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A43EA941B68A9110024BD39 /* YUNavNormalView.m */; };
 		9A43EA9B1B68C44B0024BD39 /* YUCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A43EA9A1B68C44B0024BD39 /* YUCircleButton.m */; };
@@ -52,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A275CFF1B856DF900190B6C /* YUMiniNumButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMiniNumButtonGroup.h; sourceTree = "<group>"; };
+		9A275D001B856DF900190B6C /* YUMiniNumButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMiniNumButtonGroup.m; sourceTree = "<group>"; };
+		9A275D021B856FAF00190B6C /* YUMiniGreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMiniGreenButton.h; sourceTree = "<group>"; };
+		9A275D031B856FAF00190B6C /* YUMiniGreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMiniGreenButton.m; sourceTree = "<group>"; };
 		9A37B0321B653245003A213C /* YUEyesActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEyesActivityViewController.h; sourceTree = "<group>"; };
 		9A37B0331B653245003A213C /* YUEyesActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEyesActivityViewController.m; sourceTree = "<group>"; };
 		9A43EA931B68A9110024BD39 /* YUNavNormalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNavNormalView.h; sourceTree = "<group>"; };
@@ -139,6 +145,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A275CFE1B856DC200190B6C /* 圆形迷你按钮组 */ = {
+			isa = PBXGroup;
+			children = (
+				9A275CFF1B856DF900190B6C /* YUMiniNumButtonGroup.h */,
+				9A275D001B856DF900190B6C /* YUMiniNumButtonGroup.m */,
+				9A275D021B856FAF00190B6C /* YUMiniGreenButton.h */,
+				9A275D031B856FAF00190B6C /* YUMiniGreenButton.m */,
+			);
+			name = "圆形迷你按钮组";
+			sourceTree = "<group>";
+		};
 		9A37B0311B6530F2003A213C /* 眼保健操 */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,14 +175,14 @@
 			name = "正常的Nav标题栏";
 			sourceTree = "<group>";
 		};
-		9A43EA981B68C42A0024BD39 /* CircleButton//圆角按钮 */ = {
+		9A43EA981B68C42A0024BD39 /* 圆角按钮 */ = {
 			isa = PBXGroup;
 			children = (
 				9A43EA991B68C44B0024BD39 /* YUCircleButton.h */,
 				9A43EA9A1B68C44B0024BD39 /* YUCircleButton.m */,
 				9AB8A68B1B69D64B006B11AC /* CONST_CIRCLEBUTTON.h */,
 			);
-			name = "CircleButton//圆角按钮";
+			name = "圆角按钮";
 			sourceTree = "<group>";
 		};
 		9A4949BC1B7AF6B000041639 /* 按钮切换 */ = {
@@ -202,14 +219,14 @@
 			path = YUTabController;
 			sourceTree = "<group>";
 		};
-		9A4A4C451B445AF70063F5B3 /* LoveEyesController */ = {
+		9A4A4C451B445AF70063F5B3 /* 爱眼百科 */ = {
 			isa = PBXGroup;
 			children = (
 				9A4A4C4C1B445B330063F5B3 /* YULoveEyesViewController.h */,
 				9A4A4C4D1B445B330063F5B3 /* YULoveEyesViewController.m */,
 				9A4A4C4E1B445B330063F5B3 /* YULoveEyesViewController.xib */,
 			);
-			name = LoveEyesController;
+			name = "爱眼百科";
 			sourceTree = "<group>";
 		};
 		9A4A4C461B445B070063F5B3 /* 我的 */ = {
@@ -225,11 +242,12 @@
 		9A4A4C511B4461F30063F5B3 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				9A275CFE1B856DC200190B6C /* 圆形迷你按钮组 */,
 				9A920C2B1B803A190042CFA5 /* 眼测试-选项按钮-元素 */,
 				9A4949BC1B7AF6B000041639 /* 按钮切换 */,
-				9A43EA981B68C42A0024BD39 /* CircleButton//圆角按钮 */,
+				9A43EA981B68C42A0024BD39 /* 圆角按钮 */,
 				9A4A4C521B44620B0063F5B3 /* GreeView */,
-				9A9B24FA1B3862F300DDB6AA /* GirdView/格子视图 */,
+				9A9B24FA1B3862F300DDB6AA /* 格子视图 */,
 			);
 			name = VIEW;
 			sourceTree = "<group>";
@@ -342,7 +360,7 @@
 			name = "首页";
 			sourceTree = "<group>";
 		};
-		9A9B24FA1B3862F300DDB6AA /* GirdView/格子视图 */ = {
+		9A9B24FA1B3862F300DDB6AA /* 格子视图 */ = {
 			isa = PBXGroup;
 			children = (
 				9A9B24FB1B38630700DDB6AA /* YUGridView.h */,
@@ -352,7 +370,7 @@
 				9A4A4C271B44429D0063F5B3 /* YUGirdItem.h */,
 				9A4A4C281B44429D0063F5B3 /* YUGirdItem.m */,
 			);
-			name = "GirdView/格子视图";
+			name = "格子视图";
 			sourceTree = "<group>";
 		};
 		9AB8A6871B69C6F8006B11AC /* 函数 */ = {
@@ -406,7 +424,7 @@
 				9A37B0311B6530F2003A213C /* 眼保健操 */,
 				9A9B24EF1B385DE100DDB6AA /* 首页 */,
 				9A4A4C461B445B070063F5B3 /* 我的 */,
-				9A4A4C451B445AF70063F5B3 /* LoveEyesController */,
+				9A4A4C451B445AF70063F5B3 /* 爱眼百科 */,
 				9A4A4C2A1B4452A80063F5B3 /* 底部继承 */,
 				9A9B24EE1B385DD100DDB6AA /* ROOT_CLASS */,
 			);
@@ -551,7 +569,9 @@
 				9A43EA951B68A9110024BD39 /* YUNavNormalView.m in Sources */,
 				9A58ADEC1B2D9500007314AC /* main.m in Sources */,
 				9A4A4C411B445A2E0063F5B3 /* YUTabItemButton.m in Sources */,
+				9A275D011B856DF900190B6C /* YUMiniNumButtonGroup.m in Sources */,
 				9A9B24FD1B38630700DDB6AA /* YUGridView.m in Sources */,
+				9A275D041B856FAF00190B6C /* YUMiniGreenButton.m in Sources */,
 				9A4A4C3E1B445A2E0063F5B3 /* YUSubControllerItem.m in Sources */,
 				9A9B24F81B385F9700DDB6AA /* YUHomeViewController.m in Sources */,
 				9A4A4C4F1B445B330063F5B3 /* YULoveEyesViewController.m in Sources */,

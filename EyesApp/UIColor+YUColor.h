@@ -28,6 +28,7 @@
 +(UIColor *)rgb_49_187_179_green;
 
 +(UIColor *) gray_rgb_230_230_230;
+
 +(UIColor *)GRAY_240_240_240;
 
 +(UIColor *) yPriceRed ;
@@ -44,6 +45,9 @@
 +(UIColor *)darkWhite;
 
 +(UIColor *) chocolateColor;
+
+
+
 
 
 @end

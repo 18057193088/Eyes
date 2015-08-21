@@ -9,8 +9,12 @@
 #import "YUCTestViewController.h"
 #import "UIColor+YUColor.h"
 #import "UIView+YUStyle.h"
+#import "YUMiniNumButtonGroup.h"
+
+#import "CONST_PUBLIE.h"
 #define r 75
 #define zl 0.3
+#define PADDING_LEFT 10
 @interface YUCTestViewController ()
 
 @end
@@ -35,9 +39,6 @@
     [self initView];
     
 }
-
-
-
 -(void)initView{
     self.view.backgroundColor = [UIColor GRAY_240_240_240];
     
@@ -47,7 +48,12 @@
     
     _yCircleView.layer.masksToBounds = YES;
     
+    _yMiniButtonGroup = [[YUMiniNumButtonGroup alloc]initWithFrame:CGRectMake(0, NavBarHeight, SCREEN_WIDTH - PADDING_LEFT *2, 80)];
+    _yMiniButtonGroup.backgroundColor = [UIColor redColor];
     
+    [_yMiniButtonGroup setMaxNum:10];
+    [self.view addSubview:_yMiniButtonGroup];
+    [_yMiniButtonGroup y_setLeft:PADDING_LEFT];
     _yCircleView.layer.cornerRadius = [_yCircleView y_Width]/2.0;
     _yCircleView.layer.borderColor = [UIColor blackColor].CGColor;
     _yCircleView.layer.borderWidth = 0.5 ;
@@ -61,12 +67,8 @@
     [self.view addSubview:_yCview];
     
     [_yCview y_setAlign:5];
-    
-    
     [_yCircleView y_setAlign:5];
-    
 }
-
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
 
     UITouch * touch  =  [touches anyObject];
@@ -87,7 +89,10 @@
     //y-y1=[(y2-y1)/(x2-x1)](x-x1)
     //y = kx+b b =y-kx
     // y -b =kx ,x = (y-b)/k
-    float k = (thisPoint.y-circleCenter.y) / (thisPoint.x - circleCenter.x);
+    float k = 0;
+    if((thisPoint.x - circleCenter.x)!=0){
+      k =    (thisPoint.y-circleCenter.y) / (thisPoint.x - circleCenter.x);
+    }
     float b = thisPoint.y - k * thisPoint.x;
     float x1,y1 ;
     if(fabs(thisPoint.x - circleCenter.x) > fabs(thisPoint.y - circleCenter.y)){
