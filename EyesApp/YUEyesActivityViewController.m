@@ -95,7 +95,7 @@
     _yStartButton.deledge =self;
     
     // 提示Label
-    NSString * tipStr = @"指导:\n摘下眼镜,凝视左方,双眼跟着眼球转到正上方,再转至右方,再转至正下方。逆时针和顺时针方向各坚持一分钟";
+    NSString * tipStr = tip_string_content;
     
     _yTipLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
     
@@ -136,7 +136,7 @@
 
 -(void)IF_FirstTimeStartEyesProtectButton_then_do_FirstThing{
 
-   [_yTipLabel dissMiss];
+    [_yTipLabel dissMiss];
     
     [self.y_NavView.titleView setHidden:YES];
     
@@ -161,6 +161,7 @@
 -(void)whenGroupButtonTouchUpInSide:(int)buttonIndex{
     
     if(buttonIndex ==0 ){
+        
         _Ddegree = 90;
     }else{
         _Ddegree  = - 90;

@@ -8,10 +8,12 @@
 
 #import "YUFatherViewController.h"
 @class YUMiniNumButtonGroup;
+@class YUCTestTipView;
 
 @interface YUCTestViewController : YUFatherViewController
 @property(strong,nonatomic) UIView * yCircleView;
 @property(strong,nonatomic) UIImageView * yCview;
 @property(strong,nonatomic) YUMiniNumButtonGroup * yMiniButtonGroup;
+@property(strong,nonatomic) YUCTestTipView * yTestTipView;
 
 @end

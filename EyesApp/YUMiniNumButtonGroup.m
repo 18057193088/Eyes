@@ -8,6 +8,10 @@
 
 #import "YUMiniNumButtonGroup.h"
 #import "YUMiniGreenButton.h"
+#import "UIView+YUStyle.h"
+#define marign_left 10
+#define btn_width 40
+
 @implementation YUMiniNumButtonGroup
 
 /*
@@ -27,27 +31,90 @@
         
     }
     
-    
     return self;
     
 }
 -(void)setMaxNum:(int)num{
 
     _MaxNum = num;
-    
+    YUMiniGreenButton * lastBtn = nil;
     for(int i = 0 ; i < num; i ++){
     
-        YUMiniGreenButton * btn = [[YUMiniGreenButton alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+        YUMiniGreenButton * btn = [[YUMiniGreenButton alloc]initWithFrame:CGRectMake((btn_width+marign_left) *i, 0, btn_width    , btn_width)];
         [_yScrollerView addSubview:btn];
         [_yMiniButtonArr addObject:btn];
+        [btn setTag:i];
+        
+        lastBtn = btn;
         
     }
+    
+    _yScrollerView.contentSize = CGSizeMake([lastBtn y_RightX], [self y_Height]) ;
+    
+    
 }
+
+-(void)buttonSelected:(int)index{
+
+    if(index>= _MaxNum){
+        return;
+        
+    }
+    
+    YUMiniGreenButton * thisBtn = _yMiniButtonArr[index];
+    
+    [thisBtn greenStyle];
+    
+    float centerX = [self y_Width]/2.0 ;
+    
+    float offX = thisBtn.center.x - centerX;
+
+    if(index-1>=0){
+        
+        YUMiniGreenButton * lastBtn = _yMiniButtonArr[index-1];
+        [lastBtn grayStyle];
+        
+    }
+    
+     [_yScrollerView setContentOffset:CGPointMake(offX, 0)  animated:YES];
+}
+
+-(void)selectFirstButton{
+    
+    [self buttonSelected: 0];
+
+}
+
+-(void)selectNextButton{
+
+    _curIndex++;
+    [self  buttonSelected:_curIndex];
+    
+}
+-(void)numSortByDesc{
+    int i  = _MaxNum;
+    
+    while (i--) {
+        YUMiniGreenButton * thisBtn =     [_yMiniButtonArr objectAtIndex:i];
+        [thisBtn.titleLabel setText:[NSString stringWithFormat:@"%d", _MaxNum-i]];
+    }
+}
+-(void)numSortByAsc{
+
+    
+    int i  = _MaxNum;
+    
+    while (i--) {
+        YUMiniGreenButton * thisBtn =     [_yMiniButtonArr objectAtIndex:i];
+        [thisBtn.titleLabel setText:[NSString stringWithFormat:@"%d",i+1]];
+    }
+}
+
 -(void)setUp{
     _yMiniButtonArr = [[NSMutableArray alloc]init];
     _yScrollerView = [[UIScrollView alloc]initWithFrame:self.bounds];
-    
-    
+    _yScrollerView.showsHorizontalScrollIndicator = NO;
+    _curIndex = 0 ;
     [self addSubview:_yScrollerView];
     
 }

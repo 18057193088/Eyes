@@ -22,3 +22,4 @@
 #define TIP_TOP 30
 
 #define before_title @"顺时针,准备计时"
+#define tip_string_content @"指导:\n摘下眼镜,凝视左方,双眼跟着眼球转到正上方,再转至右方,再转至正下方。逆时针和顺时针方向各坚持一分钟"

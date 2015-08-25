@@ -62,8 +62,7 @@
 
     _yGirdView.deledge =self;
     
-    
-    NSLog(@"%lf",[_yScrollView y_Height] - girdViewY);
+
     
     
      [_yScrollView addSubview:_yGirdView];

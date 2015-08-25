@@ -12,6 +12,11 @@
 @property(strong,nonatomic) UIScrollView * yScrollerView;
 @property(strong,nonatomic) NSMutableArray * yMiniButtonArr;
 @property(assign,nonatomic) int MaxNum ;
+@property(assign,nonatomic) int curIndex;
 
 -(void)setMaxNum:(int)num;
+-(void)selectFirstButton;
+-(void)selectNextButton;
+-(void)numSortByDesc;
+-(void)numSortByAsc;
 @end

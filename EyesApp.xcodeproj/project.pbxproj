@@ -30,6 +30,8 @@
 		9A58ADF71B2D9500007314AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A58ADF61B2D9500007314AC /* Images.xcassets */; };
 		9A58ADFA1B2D9500007314AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A58ADF81B2D9500007314AC /* LaunchScreen.xib */; };
 		9A58AE061B2D9500007314AC /* EyesAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A58AE051B2D9500007314AC /* EyesAppTests.m */; };
+		9A6EF4C01B8C3B8D00AB2B5D /* YULayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF4BF1B8C3B8D00AB2B5D /* YULayer.m */; };
+		9A6EF4C51B8C459F00AB2B5D /* YUCTestTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6EF4C41B8C459F00AB2B5D /* YUCTestTipView.m */; };
 		9A920C2A1B8033300042CFA5 /* YUEyesTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A920C291B8033300042CFA5 /* YUEyesTestViewController.m */; };
 		9A920C2E1B803A940042CFA5 /* YUEyeTestButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A920C2D1B803A940042CFA5 /* YUEyeTestButton.m */; };
 		9A9B24F31B385EC000DDB6AA /* YUFatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9B24F11B385EC000DDB6AA /* YUFatherViewController.m */; };
@@ -58,6 +60,7 @@
 		9A275D001B856DF900190B6C /* YUMiniNumButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMiniNumButtonGroup.m; sourceTree = "<group>"; };
 		9A275D021B856FAF00190B6C /* YUMiniGreenButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMiniGreenButton.h; sourceTree = "<group>"; };
 		9A275D031B856FAF00190B6C /* YUMiniGreenButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMiniGreenButton.m; sourceTree = "<group>"; };
+		9A3790461B8AC2E00050AECF /* CONST_CTEST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CONST_CTEST.h; sourceTree = "<group>"; };
 		9A37B0321B653245003A213C /* YUEyesActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEyesActivityViewController.h; sourceTree = "<group>"; };
 		9A37B0331B653245003A213C /* YUEyesActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEyesActivityViewController.m; sourceTree = "<group>"; };
 		9A43EA931B68A9110024BD39 /* YUNavNormalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUNavNormalView.h; sourceTree = "<group>"; };
@@ -100,6 +103,10 @@
 		9A58ADFF1B2D9500007314AC /* EyesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EyesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58AE041B2D9500007314AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A58AE051B2D9500007314AC /* EyesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EyesAppTests.m; sourceTree = "<group>"; };
+		9A6EF4BE1B8C3B8D00AB2B5D /* YULayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YULayer.h; sourceTree = "<group>"; };
+		9A6EF4BF1B8C3B8D00AB2B5D /* YULayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YULayer.m; sourceTree = "<group>"; };
+		9A6EF4C31B8C459F00AB2B5D /* YUCTestTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUCTestTipView.h; sourceTree = "<group>"; };
+		9A6EF4C41B8C459F00AB2B5D /* YUCTestTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUCTestTipView.m; sourceTree = "<group>"; };
 		9A920C281B8033300042CFA5 /* YUEyesTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEyesTestViewController.h; sourceTree = "<group>"; };
 		9A920C291B8033300042CFA5 /* YUEyesTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUEyesTestViewController.m; sourceTree = "<group>"; };
 		9A920C2C1B803A940042CFA5 /* YUEyeTestButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUEyeTestButton.h; sourceTree = "<group>"; };
@@ -242,6 +249,8 @@
 		9A4A4C511B4461F30063F5B3 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				9A6EF4C21B8C403D00AB2B5D /* C眼测试-提示视图 */,
+				9A6EF4C11B8C3D0D00AB2B5D /* 线 */,
 				9A275CFE1B856DC200190B6C /* 圆形迷你按钮组 */,
 				9A920C2B1B803A190042CFA5 /* 眼测试-选项按钮-元素 */,
 				9A4949BC1B7AF6B000041639 /* 按钮切换 */,
@@ -319,6 +328,24 @@
 				9A58AE041B2D9500007314AC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A6EF4C11B8C3D0D00AB2B5D /* 线 */ = {
+			isa = PBXGroup;
+			children = (
+				9A6EF4BE1B8C3B8D00AB2B5D /* YULayer.h */,
+				9A6EF4BF1B8C3B8D00AB2B5D /* YULayer.m */,
+			);
+			name = "线";
+			sourceTree = "<group>";
+		};
+		9A6EF4C21B8C403D00AB2B5D /* C眼测试-提示视图 */ = {
+			isa = PBXGroup;
+			children = (
+				9A6EF4C31B8C459F00AB2B5D /* YUCTestTipView.h */,
+				9A6EF4C41B8C459F00AB2B5D /* YUCTestTipView.m */,
+			);
+			name = "C眼测试-提示视图";
 			sourceTree = "<group>";
 		};
 		9A920C271B8032FC0042CFA5 /* 眼测试引导 */ = {
@@ -404,6 +431,7 @@
 			children = (
 				9ADE01BB1B82E07800BDC9D4 /* YUCTestViewController.h */,
 				9ADE01BC1B82E07800BDC9D4 /* YUCTestViewController.m */,
+				9A3790461B8AC2E00050AECF /* CONST_CTEST.h */,
 			);
 			name = "C字眼测试";
 			sourceTree = "<group>";
@@ -575,7 +603,9 @@
 				9A4A4C3E1B445A2E0063F5B3 /* YUSubControllerItem.m in Sources */,
 				9A9B24F81B385F9700DDB6AA /* YUHomeViewController.m in Sources */,
 				9A4A4C4F1B445B330063F5B3 /* YULoveEyesViewController.m in Sources */,
+				9A6EF4C51B8C459F00AB2B5D /* YUCTestTipView.m in Sources */,
 				9AE703C11B39112D0024868B /* YUNormalView.m in Sources */,
+				9A6EF4C01B8C3B8D00AB2B5D /* YULayer.m in Sources */,
 				9A4949BF1B7AF88F00041639 /* YUButtonGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
