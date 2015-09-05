@@ -13,5 +13,6 @@
 
 -(void)greenStyle;
 -(void)grayStyle;
+-(void)errorStyle;
 
 @end

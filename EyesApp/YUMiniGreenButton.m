@@ -55,6 +55,13 @@
     [_titleLabel setTextColor:GREEN_COLOR];
     
 }
+
+-(void)errorStyle{
+
+    self.backgroundColor = [UIColor redColor];
+    [_titleLabel setTextColor:[UIColor whiteColor]];
+    
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

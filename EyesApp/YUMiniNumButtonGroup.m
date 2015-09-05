@@ -54,16 +54,19 @@
     
 }
 
--(void)buttonSelected:(int)index{
+-(void)buttonSelected:(int)index lastButtonStyle:(SEL)sel{
 
     if(index>= _MaxNum){
         return;
         
     }
     
+
+    
     YUMiniGreenButton * thisBtn = _yMiniButtonArr[index];
     
     [thisBtn greenStyle];
+ 
     
     float centerX = [self y_Width]/2.0 ;
     
@@ -72,7 +75,11 @@
     if(index-1>=0){
         
         YUMiniGreenButton * lastBtn = _yMiniButtonArr[index-1];
-        [lastBtn grayStyle];
+        if([lastBtn respondsToSelector:sel]){
+            
+            [lastBtn performSelector:sel withObject:nil];
+        
+        }
         
     }
     
@@ -81,14 +88,14 @@
 
 -(void)selectFirstButton{
     
-    [self buttonSelected: 0];
+    [self buttonSelected: 0 lastButtonStyle:@selector(grayStyle)];
 
 }
 
--(void)selectNextButton{
+-(void)selectNextButtonWithLastStyle:(SEL) sel{
 
     _curIndex++;
-    [self  buttonSelected:_curIndex];
+    [self  buttonSelected:_curIndex lastButtonStyle:sel];
     
 }
 -(void)numSortByDesc{

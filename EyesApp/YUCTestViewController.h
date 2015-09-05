@@ -9,11 +9,20 @@
 #import "YUFatherViewController.h"
 @class YUMiniNumButtonGroup;
 @class YUCTestTipView;
+typedef  NS_ENUM(NSInteger, YUDirction){
+    YUDirctionUp,
+    YUDirctionDown,
+    YUDirctionLeft,
+    YUDirctionRight,
+    YUDirctionNone
+
+};
 
 @interface YUCTestViewController : YUFatherViewController
 @property(strong,nonatomic) UIView * yCircleView;
 @property(strong,nonatomic) UIImageView * yCview;
 @property(strong,nonatomic) YUMiniNumButtonGroup * yMiniButtonGroup;
 @property(strong,nonatomic) YUCTestTipView * yTestTipView;
+@property(assign,nonatomic) YUDirction yCurDiction;
 
 @end

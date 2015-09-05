@@ -16,7 +16,10 @@
 
 -(void)setMaxNum:(int)num;
 -(void)selectFirstButton;
--(void)selectNextButton;
+-(void)buttonSelected:(int)index lastButtonStyle:(SEL)sel;
+-(void)selectNextButtonWithLastStyle:(SEL) sel;
+
+
 -(void)numSortByDesc;
 -(void)numSortByAsc;
 @end

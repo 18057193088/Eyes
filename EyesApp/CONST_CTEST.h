@@ -11,3 +11,5 @@
 #define PADDING_LEFT 10
 #define btn_group_top 20
 #define TIP_SHOW_PY 40
+#define MIN_ABS_Y_OR_X 50
+#define C_VIEW_WIDTH 50 
